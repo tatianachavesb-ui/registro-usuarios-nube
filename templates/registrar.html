@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block titulo %}Registrar usuario{% endblock %}
+{% block contenido %}
+<h2>Registrar usuario</h2>
+<form method="post">
+  <label for="cedula">Cédula</label>
+  <input id="cedula" name="cedula" required pattern="[0-9]+" maxlength="15" value="{{ cedula or '' }}">
+  <label for="nombre">Nombre</label>
+  <input id="nombre" name="nombre" required maxlength="100" value="{{ nombre or '' }}">
+  <button type="submit">Guardar</button>
+</form>
+{% endblock %}
